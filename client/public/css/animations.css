@@ -1,0 +1,79 @@
+/* TEXT ROTATION CONTAINER */
+.home-content .text-rotate {
+    display: inline-block;
+    overflow: hidden;
+    height: 1.6rem;
+    color: var(--highlight-clr-1);
+}
+
+/* ROTATING TEXT */
+.text-rotate span {
+    display: block;
+    position: absolute;
+    width: auto;
+    text-align: left;
+    opacity: 0;
+    transform-origin: bottom;
+    animation: rotateText 8s infinite;
+}
+
+/* Apply Delays to Each Word */
+.text-rotate span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.text-rotate span:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.text-rotate span:nth-child(3) {
+    animation-delay: 4s;
+}
+
+.text-rotate span:nth-child(4) {
+    animation-delay: 6s;
+}
+
+/* Ensure the first word is visible initially */
+.text-rotate span:first-child {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ANIMATION KEYFRAMES */
+@keyframes rotateText {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+        /* Start lower */
+    }
+
+    3% {
+        opacity: 1;
+        transform: translateY(-5px);
+        /* Bounce up */
+    }
+
+    6% {
+        transform: translateY(0);
+        /* Settle into place */
+    }
+
+    18% {
+        opacity: 1;
+        transform: translateY(0);
+        /* Hold position */
+    }
+
+    22% {
+        opacity: 0;
+        transform: translateY(-20px);
+        /* Slide out smoothly */
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+        /* Ensures smooth loop */
+    }
+}

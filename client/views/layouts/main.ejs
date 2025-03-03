@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Root Styles -->
+    <link rel="stylesheet" href="/css/root.css">
+    <link rel="stylesheet" href="/css/animations.css">
+
+    <!-- Section-Specific Styles -->
+    <link rel="stylesheet" href="/css/sections/home.css">
+    <link rel="stylesheet" href="/css/sections/skills.css">
+    <link rel="stylesheet" href="/css/sections/services.css">
+    <link rel="stylesheet" href="/css/sections/portfolio.css">
+    <link rel="stylesheet" href="/css/sections/contact.css">
+
+    <!-- Component-Specific Styles -->
+    <link rel="stylesheet" href="/css/components/profile-card.css">
+    <link rel="stylesheet" href="/css/components/nav.css">
+    <link rel="stylesheet" href="/css/components/header.css">
+    <title>
+        <%= title %> | Web Developer
+    </title>
+</head>
+
+<body>
+
+    <div id="page-container">
+        <%- include('../partials/header') %>
+            <div id="layout">
+
+                <!-- Left Container (Fixed Sidebar + Profile Card) -->
+                <div id="left-container">
+                    <div id="sidebar-wrapper">
+                        <%- include("../partials/nav") %>
+                            <%- include("../partials/profile-card") %>
+                    </div>
+                </div>
+
+                <!-- Right Container (Scrollable Content) -->
+                <div id="right-container">
+                    <main>
+                        <%- include("../sections/home") %>
+                            <%- include("../sections/skills") %>
+                                <%- include("../sections/services") %>
+                                    <%- include("../sections/portfolio") %>
+                                        <%- include("../sections/contact") %>
+                    </main>
+                </div>
+            </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+
+
+</body>
+
+
+</html>

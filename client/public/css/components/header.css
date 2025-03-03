@@ -1,0 +1,25 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 4rem;
+    padding: 0 2rem;
+}
+
+header h1 {
+    font-weight: 600;
+}
+
+@media (min-width: 1000px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+}
+
+@media (width < 1000px) {
+    header {
+        padding: 0 1rem;
+    }
+}
