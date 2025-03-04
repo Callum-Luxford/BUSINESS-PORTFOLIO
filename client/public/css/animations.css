@@ -2,8 +2,9 @@
 .home-content .text-rotate {
     display: inline-block;
     overflow: hidden;
-    height: 1.6rem;
-    color: var(--highlight-clr-1);
+    height: 1.10em;
+    /* Auto scales based on font-size */
+    color: var(--font-highlight-1);
 }
 
 /* ROTATING TEXT */

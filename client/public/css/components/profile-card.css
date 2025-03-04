@@ -17,8 +17,8 @@
 
 /* JOB TITLE */
 .profile-card .job-title {
-    font-size: 14px;
-    color: #00ff88;
+    font-size: var(--font-size-sm);
+    color: var(--font-highlight-1);
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 5px;
@@ -26,9 +26,9 @@
 
 /* NAME */
 .profile-card h2 {
-    font-size: 24px;
-    color: white;
-    font-weight: bold;
+    font-size: var(--font-size-2xl);
+    color: var(--font-primary-clr);
+    font-weight: var(--font-weight-7);
     margin-bottom: 15px;
 }
 
@@ -46,16 +46,16 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: #222;
-    border-radius: 50%;
-    color: white;
-    font-size: 16px;
+    background: var(--icon-background);
+    border-radius: var(--border-radius-full);
+    color: var(--font-primary-clr);
+    font-size: var(--font-size-m);
     transition: background 0.3s ease-in-out;
 }
 
 .profile-card .social-links a:hover {
-    background: #00ff88;
-    color: black;
+    background: var(--font-highlight-1);
+    color: var(--font-tertiary-clr);
 }
 
 /* BUTTONS */
@@ -69,13 +69,13 @@
 .profile-card .btn {
     flex: 1;
     padding: 12px;
-    background: #222;
-    color: white;
+    background: var(--icon-background);
+    color: var(--font-primary-clr);
     text-align: center;
     text-decoration: none;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: bold;
+    border-radius: var(--border-radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-7);
     transition: background 0.3s ease-in-out;
     display: flex;
     justify-content: center;
@@ -83,8 +83,8 @@
 }
 
 .profile-card .btn:hover {
-    background: #00ff88;
-    color: black;
+    background: var(--font-highlight-1);
+    color: var(--font-tertiary-clr);
 }
 
 @media (min-width: 1000px) {
