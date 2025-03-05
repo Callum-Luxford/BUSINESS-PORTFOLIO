@@ -4,6 +4,7 @@
     padding: 3rem 0;
     background: var(--background-gradient);
     box-shadow: var(--box-shadow-border);
+    border-radius: 0 0 25px 25px;
 }
 
 /* CONTACT CONTENT */
@@ -122,4 +123,114 @@ textarea:focus {
 /* TEXT REMAINS VISIBLE */
 .submit-btn:hover {
     color: var(--font-tertiary-clr);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* CONTACT INFO SECTION */
+/* CONTACT INFO SECTION */
+/* CONTACT INFO SECTION */
+/* CONTACT INFO SECTION */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* MAKE PHONE & EMAIL SIDE-BY-SIDE */
+.contact-info .info-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* STYLE EACH INFO BOX */
+.info-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--background-gradient);
+    padding: 1rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow-border);
+    transition: border 0.3s ease-in-out, background 0.3s ease-in-out;
+    border: 1px solid transparent;
+    width: 100%;
+    min-height: 60px;
+    max-height: 60px;
+    text-decoration: none;
+}
+
+/* ICON STYLING */
+.info-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 1rem;
+    filter: var(--icon-clr-1);
+    transition: filter 0.3s ease-in-out;
+}
+
+/* TEXT STYLING */
+.info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    flex-grow: 1;
+}
+
+.info-label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-6);
+    color: var(--font-highlight-1);
+}
+
+.info-value {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-7);
+    color: var(--font-secondary-clr);
+    white-space: nowrap;
+}
+
+/* HOVER & FOCUS EFFECT - MATCHES INPUTS */
+/* Default State */
+.info-box {
+    transition: border-color 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.info-box:hover {
+    border-color: var(--font-highlight-1);
+    cursor: pointer;
+}
+
+/* Active Effect (Will be removed after click) */
+.info-box.active {
+    border-color: var(--font-highlight-1);
+}
+
+.info-box img,
+.info-box .info-text {
+    pointer-events: none;
+}
+
+/* RESPONSIVE - DESKTOP VIEW */
+@media (min-width: 768px) {
+    .contact-info .info-row {
+        flex-direction: row;
+        /* Side by side */
+    }
+
+    .info-box {
+        flex: 1;
+    }
 }

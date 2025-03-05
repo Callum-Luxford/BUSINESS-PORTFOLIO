@@ -54,6 +54,7 @@
 
 .portfolio-card .card-info .card-text {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     gap: .5rem;
 }
@@ -68,10 +69,18 @@
     background-color: var(--icon-background);
     color: var(--font-primary-clr);
     border-radius: var(--border-radius-full);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-1);
-    width: 6rem;
-    padding: 5px;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-7);
+
+    /* Below for same size buttons */
+    /* width: 6.5rem;
+    padding: 5px; */
+
+    /* Below for fitting content buttons */
+    width: fit-content;
+    padding: 5px 15px;
+
+
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     /* Move transition here */
 }

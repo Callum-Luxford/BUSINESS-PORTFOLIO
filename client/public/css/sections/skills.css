@@ -68,6 +68,7 @@
 }
 
 .progress {
+    width: 0%;
     height: 100%;
     background: var(--font-highlight-1);
     transition: width 1.5s ease-in-out;
