@@ -10,10 +10,15 @@ exports.sendMessage = async (req, res) => {
   try {
     // Set up the transporter (Replace with your SMTP details)
     let transporter = nodemailer.createTransport({
-      service: "gmail", // Use "gmail", "outlook", etc.
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false, // Use TLS
       auth: {
-        user: process.env.EMAIL_USER, // Your email
-        pass: process.env.EMAIL_PASS, // Your email password or app password
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+      tls: {
+        rejectUnauthorized: false, // Helps with self-signed certificates
       },
     });
 
