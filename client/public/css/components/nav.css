@@ -53,6 +53,13 @@
     filter: var(--icon-clr-1);
 }
 
+@media (width < 400px) {
+    .nav-icon img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
 /* MOBILE HOVER EFFECT - SLIDES UP */
 .nav-text {
     position: absolute;
