@@ -6,6 +6,16 @@ header {
     padding: 0 2rem;
 }
 
+header a {
+    text-decoration: none;
+    color: var(--font-primary-clr);
+    transition: color 0.3s ease-in-out;
+}
+header a:hover {
+    text-decoration: underline;
+    color: var(--font-highlight-1);
+}
+
 header h1 {
     font-weight: 600;
 }
