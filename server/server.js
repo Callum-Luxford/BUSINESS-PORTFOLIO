@@ -3,6 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const contactRoutes = require("./routes/contactRoutes");
+const compression = require("compression");
 
 // Init app
 const app = express();
@@ -14,6 +15,9 @@ app.set("views", path.join(__dirname, "../client/views"));
 // Middlware
 app.use(express.static(path.join(__dirname, "../client/public")));
 app.use(express.urlencoded({ extended: true }));
+
+// Enable Gzip Compression
+app.use(compression());
 
 // Routes
 app.use("/", require("./routes/mainRoutes"));
