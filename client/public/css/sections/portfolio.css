@@ -45,6 +45,8 @@
     /* Ensures the image fills the space while maintaining aspect ratio */
     align-self: center;
     border-radius: var(--border-radius-lg);
+
+    height: 200px;
 }
 
 .portfolio-card .card-info {
@@ -101,7 +103,7 @@
 
 
 .portfolio-card.large {
-    grid-row: span 2;
+    /* grid-row: span 2; */
 }
 
 .portfolio-item:hover {
@@ -116,7 +118,21 @@
         gap: 1.5rem;
         max-width: 900px;
         margin: 0 auto;
+
+        /* grid-auto-rows: 1fr; */
     }
+
+    .portfolio-card.large {
+        grid-row: span 2;
+    }
+
+
+    .portfolio-card .card-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
 }
 
 
